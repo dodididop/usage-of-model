@@ -9,7 +9,7 @@ namespace WebApi.BookOperations.DeleteBook
 {  
     public class DeleteBookCommand
     {
-        public DeleteBookViewModel Model { get; set; } 
+         
         public int BookId { get; set; }
         private readonly BookStoreDbContext _dbContext;
         public DeleteBookCommand(BookStoreDbContext dbContext)
@@ -22,9 +22,8 @@ namespace WebApi.BookOperations.DeleteBook
             if(book is null)
                 throw new InvalidOperationException("Silinecek kitap bulunamadı.");
             _dbContext.Books.Remove(book);
+            _dbContext.SaveChanges();
         }
-        public class DeleteBookViewModel{
-
-        }
+      
     }
 }

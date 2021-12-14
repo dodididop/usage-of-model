@@ -33,7 +33,7 @@ namespace WepApi.DBOperations
                         Title = "herland",
                         GenreId = 2,
                         PageCount =250,
-                        PublishDate =new DateTime(2000,04,10)
+                        PublishDate =new DateTime(2000,04,1)
                     }
                 );//database de değişiklik yapınca onu savechanges diyerek kaydetmemiz gerekir.
                 context.SaveChanges();        
